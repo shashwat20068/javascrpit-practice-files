@@ -10,3 +10,20 @@ myhead.style.textAlign = "center"
 // document.getElementsByTagName - html collection
 // document.querySelector - element or NULL 
 // document.querySelectorAll() - NODELIST
+
+
+// DOM Navigation = navigating through structure of html using javascript
+
+// .firstElementChild
+// .lastElementChild
+// .nextElementSibling
+// .previousElementSibling
+// .parentElement
+// .children
+
+// 1
+const element = document.getElementById("fruits")
+const firstChild = element.firstElementChild
+firstChild.style.backgroundColor = "yellow"
+
+// similarly for siblings childrens ids are selcted in order to select he next or previous sibling, for parent element you choose childrens id then parent elements id gets selected
