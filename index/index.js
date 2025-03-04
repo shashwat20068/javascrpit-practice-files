@@ -460,21 +460,25 @@ fnc1(fnc2)
 
 // console.log('this is the end')
 
-try{
-    const dividend = window.prompt("enter dividend")
-    const divisor = window.prompt("enter the divisor")
+// try{
+//     const dividend = window.prompt("enter dividend")
+//     const divisor = window.prompt("enter the divisor")
 
-    if(divisor == 0){
-        throw new Error("Divisor cannot be 0"); //you can throw errors using throw new Error(it is a constructor) 
-    }
+//     if(divisor == 0){
+//         throw new Error("Divisor cannot be 0"); //you can throw errors using throw new Error(it is a constructor) 
+//     }
 
 
-    const result = dividend / divisor
-    console.log(result)
-}
+//     const result = dividend / divisor
+//     console.log(result)
+// }
 
-catch(error){
-    console.error(error)
-}
+// catch(error){
+//     console.error(error)
+// }
 
-console.log('reached the end')
+// console.log('reached the end')
+
+// event listeners = listens for events to create interactive web pages, 
+//                   events = click, mouseover, mouseout
+//                   .addEventListener(click, arrow/anonymous function)
