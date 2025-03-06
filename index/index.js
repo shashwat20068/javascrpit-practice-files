@@ -478,7 +478,3 @@ fnc1(fnc2)
 // }
 
 // console.log('reached the end')
-
-// event listeners = listens for events to create interactive web pages, 
-//                   events = click, mouseover, mouseout
-//                   .addEventListener(click, arrow/anonymous function)
