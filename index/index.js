@@ -267,182 +267,182 @@
 
 
 // arrow functions 
-const hello2 = (age) => {console.log("hi")
-                         console.log(`${age}`)
-}
-hello2(23);
+// const hello2 = (age) => {console.log("hi")
+//                          console.log(`${age}`)
+// }
+// hello2(23);
 
-setTimeout(() => {console.log( `ehhhhhhhhhhh`)}, 3000);
+// setTimeout(() => {console.log( `ehhhhhhhhhhh`)}, 3000);
 
 
-// constructor = special method(function) for defining the properties and methods of objects
+// // constructor = special method(function) for defining the properties and methods of objects
 
-function Person(name, age) {
-    this.name = name; // Assigning the parameter 'name' to 'this.name'
-    this.age = age;   // Assigning the parameter 'age' to 'this.age'
-}
+// function Person(name, age) {
+//     this.name = name; // Assigning the parameter 'name' to 'this.name'
+//     this.age = age;   // Assigning the parameter 'age' to 'this.age'
+// }
   
-const person1 = new Person("Alice", 25); //used new keyword
-const person2 = new Person("Bob", 30);
+// const person1 = new Person("Alice", 25); //used new keyword
+// const person2 = new Person("Bob", 30);
   
-console.log(person1.name); // Output: Alice
-console.log(person2.age);  // Output: 30
+// console.log(person1.name); // Output: Alice
+// console.log(person2.age);  // Output: 30
 
 
-function Car(make, model, year, color){
-   this.make = make, 
-   this.model = model,
-   this.year = year, 
-   this.color = color, 
-   this.drive = function(){console.log(`You drive the ${this.model}` )} 
-}
+// function Car(make, model, year, color){
+//    this.make = make, 
+//    this.model = model,
+//    this.year = year, 
+//    this.color = color, 
+//    this.drive = function(){console.log(`You drive the ${this.model}` )} 
+// }
 
-const car1 = new Car("Ford", "raptor", 2024, "red");
-const car2 = new Car("Chevrolet", "Camaro", 2025, "blue");
-const car3 = new Car("Dodge", "Charger", 2025, "silver")
+// const car1 = new Car("Ford", "raptor", 2024, "red");
+// const car2 = new Car("Chevrolet", "Camaro", 2025, "blue");
+// const car3 = new Car("Dodge", "Charger", 2025, "silver")
 
-car1.drive(); // Output: You drive the Raptor
-car2.drive(); // Output: You drive the Camaro
-car3.drive(); // Output: You drive the Charger
+// car1.drive(); // Output: You drive the Raptor
+// car2.drive(); // Output: You drive the Camaro
+// car3.drive(); // Output: You drive the Charger
 
-// class = better way to work with objects as compared to constructors
+// // class = better way to work with objects as compared to constructors
 
-class Product{
-    constructor(name, price, discount){
-        this.name = name
-        this.price = price
-        this.discount = discount
-    }
+// class Product{
+//     constructor(name, price, discount){
+//         this.name = name
+//         this.price = price
+//         this.discount = discount
+//     }
 
-    display(){
-        console.log(`Product = ${this.name}`)
-        console.log(`Price = $${this.price}`)
-        console.log(`Discount = ${this.discount}%`)
-    }
-}
+//     display(){
+//         console.log(`Product = ${this.name}`)
+//         console.log(`Price = $${this.price}`)
+//         console.log(`Discount = ${this.discount}%`)
+//     }
+// }
 
-const Shampoo = new Product("Santoor", 20, 10);
-const Laptop = new Product("Victus", 75000, 15);
+// const Shampoo = new Product("Santoor", 20, 10);
+// const Laptop = new Product("Victus", 75000, 15);
 
-Shampoo.display();
-Laptop.display();
-
-
-// // static keyword = makes a var belong to a class itself and makes it accessible without creating an obect
-
-class MathUtils{
-    static PI = 3.14
-
-    static getDiameter(radius){
-        return radius * 2
-    } // this is a static function belonging to the class mathutils in this same way js functions like math.pow are created
-
-    static getCircumference(radius){
-        return radius * 2 * this.PI
-    }
-
-    static getArea(radius){
-        return radius * radius * this.PI
-    }
-}
-
-console.log(MathUtils.PI) // output = 3.14(here no object was created as compared to above situations)
-console.log(MathUtils.getDiameter(3))
-console.log(MathUtils.getCircumference(3))
-console.log(MathUtils.getArea(3))
-
-class User{
-    static userCount = 0
-
-    constructor(username){
-        this.username = username
-        User.userCount++
-    }
-}
-
-const user1 = new User("Riya")
-
-console.log(user1.username)
-console.log(user1.userCount) // this is wrong because userCount is static and only belongs to the class User (ountput = undefined)
-console.log(User.userCount)
+// Shampoo.display();
+// Laptop.display();
 
 
-// inheritance = allows new class to inherit properties and functions from an already existing one, helps with code reusability
+// // // static keyword = makes a var belong to a class itself and makes it accessible without creating an obect
 
-class Animals{
-    alive = true
+// class MathUtils{
+//     static PI = 3.14
 
-    constructor(name){
-        this.name = name
-    }
+//     static getDiameter(radius){
+//         return radius * 2
+//     } // this is a static function belonging to the class mathutils in this same way js functions like math.pow are created
 
-    eat(){
-        console.log(`${this.name} is eating`)
-    }
+//     static getCircumference(radius){
+//         return radius * 2 * this.PI
+//     }
+
+//     static getArea(radius){
+//         return radius * radius * this.PI
+//     }
+// }
+
+// console.log(MathUtils.PI) // output = 3.14(here no object was created as compared to above situations)
+// console.log(MathUtils.getDiameter(3))
+// console.log(MathUtils.getCircumference(3))
+// console.log(MathUtils.getArea(3))
+
+// class User{
+//     static userCount = 0
+
+//     constructor(username){
+//         this.username = username
+//         User.userCount++
+//     }
+// }
+
+// const user1 = new User("Riya")
+
+// console.log(user1.username)
+// console.log(user1.userCount) // this is wrong because userCount is static and only belongs to the class User (ountput = undefined)
+// console.log(User.userCount)
+
+
+// // inheritance = allows new class to inherit properties and functions from an already existing one, helps with code reusability
+
+// class Animals{
+//     alive = true
+
+//     constructor(name){
+//         this.name = name
+//     }
+
+//     eat(){
+//         console.log(`${this.name} is eating`)
+//     }
     
-    sleep(){
-        console.log(`${this.name} is sleeping`)
-    }
-}
+//     sleep(){
+//         console.log(`${this.name} is sleeping`)
+//     }
+// }
 
-class Rabbit extends Animals{ //extends keyword is used to start parent child relation
-    name = "Bunny"
-}
+// class Rabbit extends Animals{ //extends keyword is used to start parent child relation
+//     name = "Bunny"
+// }
 
-class Dog extends Animals{
-    name = "Tommy"
-}
+// class Dog extends Animals{
+//     name = "Tommy"
+// }
 
-class Tiger extends Animals{
-    name = "Tora"
-}
+// class Tiger extends Animals{
+//     name = "Tora"
+// }
 
-const RabbitA = new Rabbit()
-const DogA = new Dog()
-const TigerA = new Tiger()
+// const RabbitA = new Rabbit()
+// const DogA = new Dog()
+// const TigerA = new Tiger()
 
-console.log(RabbitA.name)
-RabbitA.eat()
-DogA.sleep()
+// console.log(RabbitA.name)
+// RabbitA.eat()
+// DogA.sleep()
 
 
-// super keyword = used to call constructors or access properties from a parent
+// // super keyword = used to call constructors or access properties from a parent
 
-class Bird{
-    constructor(){
+// class Bird{
+//     constructor(){
 
-    }
-}
+//     }
+// }
 
-class Parrot extends Bird{
-    constructor(){
+// class Parrot extends Bird{
+//     constructor(){
         
-    }
-}
+//     }
+// }
 
-class Crow extends Bird{
-    constructor(){
+// class Crow extends Bird{
+//     constructor(){
         
-    }
-}
+//     }
+// }
 
-// setTimeout() = allows to schedule a funcs execution
+// // setTimeout() = allows to schedule a funcs execution
 
-//sync = line by line execution
-//async = allows multiple oper to be completed at same time without waiting, doesnt block exec(mostly network requests and fetching data)
+// //sync = line by line execution
+// //async = allows multiple oper to be completed at same time without waiting, doesnt block exec(mostly network requests and fetching data)
 
-function fnc1(a){
-    setTimeout(()=>{console.log('Task 1');
-                    a();}, 3000)
-}
+// function fnc1(a){
+//     setTimeout(()=>{console.log('Task 1');
+//                     a();}, 3000)
+// }
 
-function fnc2(){
-    console.log('Task 2')
-    console.log('Task 3')
-    console.log('Task 4')
-}
+// function fnc2(){
+//     console.log('Task 2')
+//     console.log('Task 3')
+//     console.log('Task 4')
+// }
 
-fnc1(fnc2)
+// fnc1(fnc2)
 
 
 // error = an object that is created to represent a problem that occurs often with user input or connection establishment
