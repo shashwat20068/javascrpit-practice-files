@@ -25,3 +25,22 @@ myBox.addEventListener("mouseout", event =>{
     event.target.style.backgroundColor = "lightgreen"
     event.target.textContent = "Click Me"
 })
+
+// key events = events = keydown, keyup
+//                      document,addEventListener(event, callback)
+
+
+
+
+const myNewBox = document.getElementById("myNewBox")
+
+document.addEventListener("keydown", event =>{
+    myNewBox.textContent = "keyPressTrue"
+    myNewBox.backgroundColor = "tomato"
+}
+)
+document.addEventListener("keyup", event =>{
+    myNewBox.textContent = "keyPressFalse"
+    myNewBox.backgroundColor = "tomato"
+})
+
